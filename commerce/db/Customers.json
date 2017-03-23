@@ -1,8 +1,14 @@
 [
   {
-    "nama": "asdasd",
-    "alamat": "asdasdsadasd",
-    "uang": "123124",
-    "id": 8296
+    "nama": "Hasan",
+    "alamat": "Bogor",
+    "uang": "1000000",
+    "id": 4619
+  },
+  {
+    "nama": "Fatih",
+    "alamat": "Jakarta",
+    "uang": "12000",
+    "id": 6752
   }
 ]

@@ -68,5 +68,52 @@
       "alamat": "asdasdsadasd",
       "uang": "123124"
     }
+  },
+  {
+    "type": "itemAdded",
+    "timestamp": 1490236940076,
+    "item": {
+      "nama": "Mainan",
+      "deskripsi": "mainan anak",
+      "harga": "30000",
+      "stok": "10",
+      "id": 2918
+    }
+  },
+  {
+    "type": "customerDeleted",
+    "timestamp": 1490236942837,
+    "id": 8296
+  },
+  {
+    "type": "customerAdded",
+    "timestamp": 1490236950592,
+    "customer": {
+      "nama": "Hasan",
+      "alamat": "Bogor",
+      "uang": "1000000",
+      "id": 4619
+    }
+  },
+  {
+    "type": "customerAdded",
+    "timestamp": 1490236971774,
+    "customer": {
+      "nama": "Fatih",
+      "alamat": "Jakarta",
+      "uang": "12000",
+      "id": 6752
+    }
+  },
+  {
+    "type": "itemAdded",
+    "timestamp": 1490237088721,
+    "item": {
+      "nama": "Balon",
+      "deskripsi": "5 balon",
+      "harga": "1200",
+      "stok": "5",
+      "id": 1324
+    }
   }
 ]

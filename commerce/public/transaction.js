@@ -40,3 +40,40 @@ bankData$.subscribe(banks => {
 
   $bankOptions.append(options);
 });
+
+
+
+
+
+
+
+
+const $selectItem = $('#item-list');
+const selectedItemChange$ = Rx.Observable
+  .fromEvent($selectItem, 'change')
+  .map(event => parseInt(event.target.value))
+  .flatMap(id => {
+    // return stream of item (yang id sama seperti yang user pilih)
+    return itemData$
+      .flatMap(items => {
+        return Rx.Observable.from(items);
+      })
+      .filter(item => {
+        return item.id === id;
+      });
+  });
+
+
+selectedItemChange$.subscribe(item => {
+  const stok = parseInt(item.stok);
+
+  let options = '';
+  for (let i = 0; i < stok; i++) {
+    const option = optionTemplate
+      .replace('$value', i + 1)
+      .replace('$text', i + 1 + ' buah');
+    options += option;
+  }
+
+  $('#jumlah-item').html(options);
+});
