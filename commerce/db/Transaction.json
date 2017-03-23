@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1095,
+    "namaCustomer": "Hasan",
+    "alamatCustomer": "Bogor",
+    "namaItem": "Boneka",
+    "hargaItem": "100000",
+    "jumlahItem": 3,
+    "totalHarga": 300000,
+    "status": "ordered"
+  },
+  {
+    "id": 7457,
+    "namaCustomer": "Hasan",
+    "alamatCustomer": "Bogor",
+    "namaItem": "Boneka",
+    "hargaItem": "100000",
+    "jumlahItem": 2,
+    "totalHarga": 200000,
+    "status": "ordered"
+  },
+  {
+    "id": 6210,
+    "namaCustomer": "Fatih",
+    "alamatCustomer": "Jakarta",
+    "namaItem": "Balon",
+    "hargaItem": "1200",
+    "jumlahItem": 3,
+    "totalHarga": 3600,
+    "status": "ordered"
+  },
+  {
+    "id": 7867,
+    "namaCustomer": "Fatih",
+    "alamatCustomer": "Jakarta",
+    "namaItem": "Mainan",
+    "hargaItem": "30000",
+    "jumlahItem": 1,
+    "totalHarga": 30000,
+    "status": "ordered"
+  },
+  {
+    "id": 9485,
+    "namaCustomer": "Fatih",
+    "alamatCustomer": "Jakarta",
+    "namaItem": "Boneka",
+    "hargaItem": "100000",
+    "jumlahItem": 1,
+    "totalHarga": 100000,
+    "status": "ordered"
+  }
+]
