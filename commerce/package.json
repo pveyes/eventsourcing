@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "script": {
+    "start": "node server.js"
+  },
   "marlint": {
     "envs": ["browser", "node", "es6"],
     "globals": ["$", "Rx"],

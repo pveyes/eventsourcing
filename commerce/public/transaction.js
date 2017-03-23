@@ -13,6 +13,30 @@ const $bankOptions = $('#bank-list');
 const $transactionTable = $('#transaction tbody');
 
 const optionTemplate = $('#option-template').text();
+const transactionRowTemplate = $('#transaction-row-template').text();
+
+function createNewTransactionFromTemplate(transaction) {
+  const newTransaction = transactionRowTemplate
+    .replace(/\$transaction_id/g, transaction.id)
+    .replace('$nama_customer', transaction.namaCustomer)
+    .replace('$alamat_customer', transaction.alamatCustomer)
+    .replace('$nama_item', transaction.namaItem)
+    .replace('$jumlah_item', transaction.jumlahItem)
+    .replace('$harga_item', transaction.hargaItem)
+    .replace('$harga_total', transaction.totalHarga)
+    .replace('$status_transaksi', transaction.status);
+
+  const $newTransaction = $(newTransaction);
+  if (transaction.status === 'ordered') {
+    $newTransaction.find('button.bayar').show();
+  }
+
+  if (transaction.status === 'paid') {
+    $newTransaction.find('button.kirim').show();
+  }
+
+  return $newTransaction;
+}
 
 itemData$.subscribe(items => {
   const options = items.map(item => {
@@ -44,27 +68,13 @@ bankData$.subscribe(banks => {
   $bankOptions.append(options);
 });
 
-const transactionRowTemplate = $('#transaction-row-template').text();
 transactionData$.subscribe(transactions => {
   const rows = transactions.map(transaction => {
-    return transactionRowTemplate
-      .replace(/\$transaction_id/g, transaction.id)
-      .replace('$nama_customer', transaction.namaCustomer)
-      .replace('$alamat_customer', transaction.alamatCustomer)
-      .replace('$nama_item', transaction.namaItem)
-      .replace('$jumlah_item', transaction.jumlahItem)
-      .replace('$harga_item', transaction.hargaItem)
-      .replace('$harga_total', transaction.totalHarga)
-      .replace('$status_transaksi', transaction.status);
+    return createNewTransactionFromTemplate(transaction);
   });
 
   $transactionTable.append(rows);
 });
-
-
-
-
-
 
 const $selectItem = $('#item-list');
 const selectedItemChange$ = Rx.Observable
@@ -81,7 +91,7 @@ const selectedItemChange$ = Rx.Observable
       });
   });
 
-$jumlahOptions = $('#jumlah-item');
+const $jumlahOptions = $('#jumlah-item');
 selectedItemChange$.subscribe(item => {
   const stok = parseInt(item.stok);
 
@@ -177,7 +187,7 @@ const beliItem$ = Rx.Observable
   .flatMap(pembelian => {
     return Rx.Observable.fromPromise(
       post('/transaction/add', pembelian)
-    )
+    );
   })
   .filter(serverResponse => {
     return serverResponse.success === true;
@@ -187,26 +197,14 @@ beliItem$.subscribe(val => {
   console.log(val);
 });
 
-
-
 const transactionFromSSE$ = Rx.Observable
   .fromEvent(ts, 'added')
   .map(event => {
     const transaction = JSON.parse(event.data);
     return transaction;
-  })
-
+  });
 
 transactionFromSSE$.subscribe(transaction => {
-  const newTransaction = transactionRowTemplate
-    .replace(/\$transaction_id/g, transaction.id)
-    .replace('$nama_customer', transaction.namaCustomer)
-    .replace('$alamat_customer', transaction.alamatCustomer)
-    .replace('$nama_item', transaction.namaItem)
-    .replace('$jumlah_item', transaction.jumlahItem)
-    .replace('$harga_item', transaction.hargaItem)
-    .replace('$harga_total', transaction.totalHarga)
-    .replace('$status_transaksi', transaction.status);
-
-  $transactionTable.append(newTransaction);
+  const $newTransaction = createNewTransactionFromTemplate(transaction);
+  $transactionTable.append($newTransaction);
 });

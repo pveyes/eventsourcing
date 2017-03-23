@@ -209,5 +209,19 @@
       "totalHarga": 100000,
       "status": "ordered"
     }
+  },
+  {
+    "type": "transactionAdded",
+    "timestamp": 1490243480594,
+    "transaction": {
+      "id": 9673,
+      "namaCustomer": "Hasan",
+      "alamatCustomer": "Bogor",
+      "namaItem": "Balon",
+      "hargaItem": "1200",
+      "jumlahItem": 1,
+      "totalHarga": 1200,
+      "status": "ordered"
+    }
   }
 ]
