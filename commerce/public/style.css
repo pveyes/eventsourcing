@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: Lucida Sans, Arial, sans-serif;
+}
+
+#app {
+  margin: auto;
+  width: 900px;
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+table, tr, th, td {
+  border: 1px solid #333;
+  border-collapse: collapse;
+}
+
+#tabel-item {
+  min-width: 832px;
+}
+
+#tabel-customer {
+  min-width: 662px;
+}
+
+#tabel-bank {
+  min-width: 832px;
+}
+
+th {
+  background-color: #eee;
+}
+
+th,
+.dynamic-table td:last-child {
+  padding: 10px;
+}
+
+.dynamic-table th:last-child,
+.dynamic-table td:last-child {
+  width: 130px;
+  min-width: 130px;
+  max-width: 130px;
+  text-align: center;
+}
+
+button {
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  border: 1px solid #222;
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.select {
+  margin: 20px 0;
+}
+
+.select label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+.select select {
+  min-width: 150px;
+}
+
+#transaction td {
+  padding: 0 10px;
+}

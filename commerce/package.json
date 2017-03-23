@@ -1,0 +1,22 @@
+{
+  "name": "commerce",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "marlint": {
+    "envs": ["browser", "node", "es6"],
+    "globals": ["$", "Rx"],
+    "rules": {
+      "no-unused-vars": 0,
+      "object-shorthand": 0,
+      "radix": 0,
+      "no-console": 0,
+      "no-sync": 0
+    }
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-sse": "^0.4.1"
+  }
+}

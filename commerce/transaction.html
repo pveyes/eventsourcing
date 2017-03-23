@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Transaction</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <form id="form">
+        <h2>Buy Item</h2>
+        <div class="select">
+          <label>Customer</label>
+          <select id="customer-list">
+            <option>Pilih Customer</option>
+          </select>
+        </div>
+
+        <div class="select">
+          <label>Item</label>
+          <select id="item-list">
+            <option>Pilih Item</option>
+          </select>
+        </div>
+
+        <div class="select">
+          <label>Jumlah</label>
+          <select id="jumlah-item">
+            <option>Pilih jumlah item</option>
+          </select>
+        </div>
+
+        <div class="select">
+          <label>Bank</label>
+          <select id="bank-list">
+            <option>Pilih Bank</option>
+          </select>
+        </div>
+
+
+        <button id="buy-item">Buy Item</button>
+      </form>
+
+      <table id="transaction">
+        <tbody>
+          <h2>Transaksi</h2>
+          <tr>
+            <th>Nama Customer</th>
+            <th>Alamat Customer</th>
+            <th>Nama Item</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          <tr id="$transaction_id">
+            <td>$nama_customer</td>
+            <td>$alamat_customer</td>
+            <td>$nama_item</td>
+            <td>$harga_item</td>
+            <td>$jumlah_item</td>
+            <td>$harga_total</td>
+            <td>$status_transaksi</td>
+            <td>
+              <button>Bayar</button>
+              <button>Kirim</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script id="option-template" type="text/template">
+      <option value="$value">$text</option>
+    </script>
+
+    <script id="transaction-row-template" type="text/template">
+      <tr id="$transaction_id">
+        <td>$nama_customer</td>
+        <td>$alamat_customer</td>
+        <td>$nama_item</td>
+        <td>$harga_item</td>
+        <td>$jumlah_item</td>
+        <td>$harga_total</td>
+        <td>$status_transaksi</td>
+        <td>
+          <button class="bayar" style='display: none'>Bayar</button>
+          <button class="kirim" style='display: none'>Kirim</button>
+        </td>
+      </tr>
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/rxjs/bundles/Rx.min.js"></script>
+    <script src="/static/script.js" charset="utf-8"></script>
+    <script src="/static/transaction.js" charset="utf-8"></script>
+</html>

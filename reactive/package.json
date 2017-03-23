@@ -1,0 +1,17 @@
+{
+  "name": "reactive",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "marlint": {
+    "env": ["browser", "node", "es6"],
+    "globals": ["Rx"],
+    "rules": {
+      "no-console": 0
+    }
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-sse": "^0.4.1"
+  }
+}

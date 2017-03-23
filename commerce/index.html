@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h2>Items</h2>
+      <table id="tabel-item" class="dynamic-table">
+        <tbody>
+          <tr>
+            <th>Nama</th>
+            <th>Deskripsi</th>
+            <th>Harga</th>
+            <th>Stok</th>
+            <th class="cell-btn"><button class="tambah" id="tambah-item">Tambah</button></th>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Customers</h2>
+      <table id="tabel-customer" class="dynamic-table">
+        <tbody>
+          <tr>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Uang</th>
+            <th><button class="tambah" id="tambah-customer">Tambah</button>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Banks</h2>
+      <table id="tabel-bank" class="dynamic-table">
+        <tbody>
+          <tr>
+            <th>Nama</th>
+            <th>No Rekening</th>
+            <th>Kode Bank</th>
+            <th>Saldo</th>
+            <th><button class="tambah" id="tambah-bank">Tambah</button></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script id="item-row-template" type="text/template">
+      <tr class="item" id="$item_id">
+        <td><input class="nama-item" /></td>
+        <td><input class="deskripsi-item" /></td>
+        <td><input class="harga-item" /></td>
+        <td><input class="stok-item" /></td>
+        <td class="cell-btn">
+          <button class="edit" style='display:none'>Edit</button>
+          <button class="delete" style='display:none'>Delete</button>
+          <button class="save">Save</button>
+          <button class="cancel">Cancel</button>
+        </td>
+      </tr>
+    </script>
+
+    <script id="customer-row-template" type="text/template">
+      <tr class="customer" id="$customer_id">
+        <td><input class="nama-customer" /></td>
+        <td><input class="alamat-customer" /></td>
+        <td><input class="uang-customer" /></td>
+        <td>
+          <button class="edit" style='display:none'>Edit</button>
+          <button class="delete" style='display:none'>Delete</button>
+          <button class="save">Save</button>
+          <button class="cancel">Cancel</button>
+        </td>
+      </tr>
+    </script>
+
+    <script id="bank-row-template" type="text/template">
+      <tr class="bank" id="$bank_id">
+        <td><input class="nama-bank" /></td>
+        <td><input class="rekening-bank" /></td>
+        <td><input class="kode-bank" /></td>
+        <td><input class="saldo-bank" /></td>
+        <td>
+          <button class="edit" style='display:none'>Edit</button>
+          <button class="delete" style='display:none'>Delete</button>
+          <button class="save">Save</button>
+          <button class="cancel">Cancel</button>
+        </td>
+      </tr>
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/rxjs/bundles/Rx.min.js"></script>
+    <script src="/static/script.js"></script>
+    <script src="/static/item.js"></script>
+    <script src="/static/customer.js"></script>
+    <script src="/static/bank.js"></script>
+  </body>
+</html>
