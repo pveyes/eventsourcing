@@ -223,5 +223,58 @@
       "totalHarga": 1200,
       "status": "ordered"
     }
+  },
+  {
+    "type": "transactionPaid",
+    "timestamp": 1490244351677,
+    "id": "9673"
+  },
+  {
+    "type": "transactionPaid",
+    "timestamp": 1490244408644,
+    "id": 9673
+  },
+  {
+    "type": "transactionPaid",
+    "timestamp": 1490244600313,
+    "id": 9673
+  },
+  {
+    "type": "transactionPaid",
+    "timestamp": 1490244617383,
+    "id": 9673
+  },
+  {
+    "type": "transactionPaid",
+    "timestamp": 1490244674747,
+    "id": 9673
+  },
+  {
+    "type": "transactionPaid",
+    "timestamp": 1490245122210
+  },
+  {
+    "type": "transactionPaid",
+    "timestamp": 1490245164203,
+    "transaction": {
+      "id": 9673,
+      "namaCustomer": "Hasan",
+      "alamatCustomer": "Bogor",
+      "namaItem": "Balon",
+      "hargaItem": "1200",
+      "jumlahItem": 1,
+      "totalHarga": 1200,
+      "status": "ordered"
+    }
+  },
+  {
+    "type": "itemDeleted",
+    "timestamp": 1490245500969,
+    "id": 6430
+  },
+  {
+    "type": "itemDeleted",
+    "timestamp": 1490245502959,
+    "id": 1324
   }
 ]

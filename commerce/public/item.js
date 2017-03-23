@@ -66,7 +66,7 @@ const updateItem$ = modifyItem$
 const deleteItem$ = deleteData$
   .filter(event => {
     const $tabel = $(event.target).parent().parent().parent().parent();
-    return $tabel.attr('id') === 'tabel-bank';
+    return $tabel.attr('id') === 'tabel-item';
   })
   .flatMap(event => {
     const $row = $(event.target).parent().parent();

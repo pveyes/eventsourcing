@@ -1,12 +1,5 @@
 [
   {
-    "nama": "Boneka",
-    "deskripsi": "boneka lucu",
-    "harga": "100000",
-    "stok": "4",
-    "id": 6430
-  },
-  {
     "nama": "Mainan",
     "deskripsi": "mainan anak",
     "harga": "30000",
@@ -15,9 +8,9 @@
   },
   {
     "nama": "Balon",
-    "deskripsi": "5 balon",
-    "harga": "1200",
-    "stok": "5",
+    "deskripsi": "balonku",
+    "harga": "30000",
+    "stok": "4",
     "id": 1324
   }
 ]

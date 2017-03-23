@@ -208,3 +208,32 @@ transactionFromSSE$.subscribe(transaction => {
   const $newTransaction = createNewTransactionFromTemplate(transaction);
   $transactionTable.append($newTransaction);
 });
+
+const bayarItem$ = Rx.Observable
+  .fromEvent(document, 'click')
+  .filter(event => event.target.className === 'bayar')
+  .flatMap(event => {
+    const $row = $(event.target).parent().parent();
+    const transactionId = parseInt($row.attr('id'));
+
+    return transactionData$
+      .flatMap(transactions => Rx.Observable.from(transactions))
+      .filter(transaction => transaction.id === transactionId)
+      .flatMap(transaction => {
+        return Rx.Observable.fromPromise(
+          post('/transaction/pay', { transaction })
+        );
+      });
+  });
+
+const paidTransactionFromSSE$ = Rx.Observable
+  .fromEvent(ts, 'paid')
+  .map(event => event.data);
+
+bayarItem$.subscribe();
+paidTransactionFromSSE$.subscribe(id => {
+  const $row = $('#' + id);
+  $row.find('td:nth-child(8)').text('paid');
+  $row.find('button.bayar').hide();
+  $row.find('button.kirim').show();
+});

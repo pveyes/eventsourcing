@@ -41,4 +41,17 @@ EventStore.on('itemDeleted', event => {
   writeItems(newItems);
 });
 
+EventStore.on('transactionPaid', event => {
+  const items = readItems();
+  const newItems = items.map(item => {
+    if (item.nama === event.transaction.namaItem) {
+      item.stok -= event.transaction.jumlahItem;
+      return item;
+    }
+
+    return item;
+  });
+  writeItems(newItems);
+});
+
 exports.read = readItems;

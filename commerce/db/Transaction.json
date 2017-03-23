@@ -3,10 +3,11 @@
     "id": 9673,
     "namaCustomer": "Hasan",
     "alamatCustomer": "Bogor",
+    "idItem": 1324,
     "namaItem": "Balon",
     "hargaItem": "1200",
     "jumlahItem": 1,
     "totalHarga": 1200,
-    "status": "ordered"
+    "status": "paid"
   }
 ]

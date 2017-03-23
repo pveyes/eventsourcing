@@ -45,4 +45,23 @@ router.post('/add', (req, res) => {
 // /transaction/stream
 router.get('/stream', sse.init);
 
+router.post('/pay', (req, res) => {
+  const transaction = req.body.transaction;
+
+  const event = {
+    type: 'transactionPaid',
+    timestamp: new Date().getTime(),
+    transaction: transaction,
+  };
+
+  EventStore.append(event, err => {
+    if (err) {
+      return res.status(500).json({ error: err });
+    }
+
+    sse.send(transaction.id, 'paid');
+    return res.status(200).json({ success: true });
+  });
+});
+
 module.exports = router;

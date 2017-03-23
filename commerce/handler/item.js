@@ -1,6 +1,7 @@
 const express = require('express');
 const EventStore = require('../store');
 const Items = require('../projections/item');
+const Transaction = require('../projections/transaction');
 
 const router = express.Router();
 
@@ -59,6 +60,12 @@ router.post('/delete', (req, res) => {
     timestamp: new Date().getTime(),
     id: id,
   };
+
+  const transactions = Transaction.read();
+  const adaItemDiTransaction = transactions.find(transaction => transaction.idItem === id);
+  if (adaItemDiTransaction) {
+    return res.status(500).json({ error: 'Sudah ada di transaksi' });
+  }
 
   EventStore.append(event, err => {
     if (err) {

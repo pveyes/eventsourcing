@@ -23,4 +23,17 @@ EventStore.on('transactionAdded', event => {
   writeTransactions(newTransactions);
 });
 
+EventStore.on('transactionPaid', event => {
+  const transactions = readTransactions();
+  const newTransactions = transactions.map(transaction => {
+    if (transaction.id === event.transaction.id) {
+      transaction.status = 'paid';
+      return transaction;
+    }
+
+    return transaction;
+  });
+  writeTransactions(newTransactions);
+});
+
 exports.read = readTransactions;
