@@ -115,5 +115,99 @@
       "stok": "5",
       "id": 1324
     }
+  },
+  {
+    "type": "transactionAdded",
+    "timestamp": 1490240983589,
+    "transaction": {
+      "namaCustomer": "Hasan",
+      "alamatCustomer": "Bogor",
+      "namaItem": "Mainan",
+      "jumlahItem": 1,
+      "totalHarga": 30000,
+      "status": "ordered"
+    }
+  },
+  {
+    "type": "transactionAdded",
+    "timestamp": 1490241624065,
+    "transaction": {
+      "namaCustomer": "Hasan",
+      "alamatCustomer": "Bogor",
+      "namaItem": "Boneka",
+      "jumlahItem": 2,
+      "totalHarga": 200000,
+      "status": "ordered"
+    }
+  },
+  {
+    "type": "transactionAdded",
+    "timestamp": 1490241685267,
+    "transaction": {
+      "id": 1095,
+      "namaCustomer": "Hasan",
+      "alamatCustomer": "Bogor",
+      "namaItem": "Boneka",
+      "hargaItem": "100000",
+      "jumlahItem": 3,
+      "totalHarga": 300000,
+      "status": "ordered"
+    }
+  },
+  {
+    "type": "transactionAdded",
+    "timestamp": 1490242237188,
+    "transaction": {
+      "id": 7457,
+      "namaCustomer": "Hasan",
+      "alamatCustomer": "Bogor",
+      "namaItem": "Boneka",
+      "hargaItem": "100000",
+      "jumlahItem": 2,
+      "totalHarga": 200000,
+      "status": "ordered"
+    }
+  },
+  {
+    "type": "transactionAdded",
+    "timestamp": 1490242294198,
+    "transaction": {
+      "id": 6210,
+      "namaCustomer": "Fatih",
+      "alamatCustomer": "Jakarta",
+      "namaItem": "Balon",
+      "hargaItem": "1200",
+      "jumlahItem": 3,
+      "totalHarga": 3600,
+      "status": "ordered"
+    }
+  },
+  {
+    "type": "transactionAdded",
+    "timestamp": 1490242363880,
+    "transaction": {
+      "id": 7867,
+      "namaCustomer": "Fatih",
+      "alamatCustomer": "Jakarta",
+      "namaItem": "Mainan",
+      "hargaItem": "30000",
+      "jumlahItem": 1,
+      "totalHarga": 30000,
+      "status": "ordered"
+    }
+  },
+  {
+    "type": "transactionAdded",
+    "timestamp": 1490242389512,
+    "transaction": {
+      "id": 9485,
+      "namaCustomer": "Fatih",
+      "alamatCustomer": "Jakarta",
+      "namaItem": "Boneka",
+      "hargaItem": "100000",
+      "jumlahItem": 1,
+      "totalHarga": 100000,
+      "status": "ordered"
+    }
   }
 ]

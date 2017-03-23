@@ -45,6 +45,7 @@
         <tbody>
           <h2>Transaksi</h2>
           <tr>
+            <th>ID</th>
             <th>Nama Customer</th>
             <th>Alamat Customer</th>
             <th>Nama Item</th>
@@ -53,19 +54,6 @@
             <th>Total</th>
             <th>Status</th>
             <th>Action</th>
-          </tr>
-          <tr id="$transaction_id">
-            <td>$nama_customer</td>
-            <td>$alamat_customer</td>
-            <td>$nama_item</td>
-            <td>$harga_item</td>
-            <td>$jumlah_item</td>
-            <td>$harga_total</td>
-            <td>$status_transaksi</td>
-            <td>
-              <button>Bayar</button>
-              <button>Kirim</button>
-            </td>
           </tr>
         </tbody>
       </table>
@@ -77,6 +65,7 @@
 
     <script id="transaction-row-template" type="text/template">
       <tr id="$transaction_id">
+        <td>$transaction_id</td>
         <td>$nama_customer</td>
         <td>$alamat_customer</td>
         <td>$nama_item</td>
