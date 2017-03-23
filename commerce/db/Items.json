@@ -1,12 +1,5 @@
 [
   {
-    "nama": "Mainan",
-    "deskripsi": "mainan anak",
-    "harga": "30000",
-    "stok": "10",
-    "id": 2918
-  },
-  {
     "nama": "Balon",
     "deskripsi": "balonku",
     "harga": "30000",

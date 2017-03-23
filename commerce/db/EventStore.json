@@ -276,5 +276,10 @@
     "type": "itemDeleted",
     "timestamp": 1490245502959,
     "id": 1324
+  },
+  {
+    "type": "itemDeleted",
+    "timestamp": 1490246698213,
+    "id": 2918
   }
 ]

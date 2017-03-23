@@ -74,14 +74,13 @@ const deleteItem$ = deleteData$
 
     return Rx.Observable.fromPromise(
       post('/item/delete', { id: id })
-    ).map(serverResponse => {
+    ).map(response => {
       return {
-        success: serverResponse.success,
+        response: response,
         $row: $row,
       };
     });
-  })
-  .filter(val => val.success);
+  });
 
 
 itemData$.subscribe(val => {
@@ -119,4 +118,10 @@ updateItem$.subscribe(val => {
   setInputReadOnly($row);
 });
 
-deleteItem$.subscribe(event => event.$row.remove());
+deleteItem$.subscribe(event => {
+  if (event.response.success) {
+    return event.$row.remove();
+  }
+
+  alert(event.response.error);
+});
