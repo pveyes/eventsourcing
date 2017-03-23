@@ -19,7 +19,7 @@ class EventStore extends EventEmitter {
 
   append(event, callback) {
     const newEvents = this.events.concat([event]);
-    fs.writeFile(file, JSON.stringify(newEvents), err => {
+    fs.writeFile(file, JSON.stringify(newEvents, false, 2), err => {
       if (err) {
         return callback(err);
       }

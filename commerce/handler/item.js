@@ -4,11 +4,13 @@ const Items = require('../projections/item');
 
 const router = express.Router();
 
+// /item
 router.get('/', (req, res) => {
   const items = Items.read();
   return res.json(items);
 });
 
+// /addItem -> /item/add
 router.post('/add', (req, res) => {
   const item = Object.assign({}, req.body, {
     id: Math.floor(Math.random() * 10000),

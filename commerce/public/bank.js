@@ -64,6 +64,10 @@ const updateBank$ = modifyBank$
   .filter(serverResponse => serverResponse.success);
 
 const deleteBank$ = deleteData$
+  .filter(event => {
+    const $tabel = $(event.target).parent().parent().parent().parent();
+    return $tabel.attr('id') === 'tabel-bank';
+  })
   .flatMap(event => {
     const $row = $(event.target).parent().parent();
     const id = parseInt($row.attr('id'));

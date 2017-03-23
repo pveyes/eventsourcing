@@ -1,1 +1,72 @@
-[{"type":"itemAdded","timestamp":1490233295493,"item":{"nama":"Boneka","deskripsi":"boneka lucu","harga":"100000","stok":"4","id":6430}},{"type":"customerAdded","timestamp":1490233305637,"customer":{"nama":"Fatih","alamat":"Kalideres","uang":"1000","id":231}}]
+[
+  {
+    "type": "customerAdded",
+    "timestamp": 1490235970751,
+    "customer": {
+      "nama": "A",
+      "alamat": "ala",
+      "uang": "123",
+      "id": 8063
+    }
+  },
+  {
+    "type": "bankDeleted",
+    "timestamp": 1490235971667,
+    "id": 8063
+  },
+  {
+    "type": "customerAdded",
+    "timestamp": 1490236116413,
+    "customer": {
+      "nama": "asdas",
+      "alamat": "asdasd",
+      "uang": "asdasd",
+      "id": 1555
+    }
+  },
+  {
+    "type": "customerDeleted",
+    "timestamp": 1490236117310,
+    "id": 1555
+  },
+  {
+    "type": "bankDeleted",
+    "timestamp": 1490236117317,
+    "id": 1555
+  },
+  {
+    "type": "customerAdded",
+    "timestamp": 1490236384280,
+    "customer": {
+      "nama": "asdas",
+      "alamat": "asdasd",
+      "uang": "12312",
+      "id": 8093
+    }
+  },
+  {
+    "type": "customerDeleted",
+    "timestamp": 1490236390935,
+    "id": 8093
+  },
+  {
+    "type": "customerAdded",
+    "timestamp": 1490236482443,
+    "customer": {
+      "nama": "asdasd",
+      "alamat": "asdasdsadasd",
+      "uang": "1231243",
+      "id": 8296
+    }
+  },
+  {
+    "type": "customerEdited",
+    "timestamp": 1490236487918,
+    "id": 8296,
+    "customer": {
+      "nama": "asdasd",
+      "alamat": "asdasdsadasd",
+      "uang": "123124"
+    }
+  }
+]

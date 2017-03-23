@@ -63,6 +63,10 @@ const updateCustomer$ = modifyCustomer$
   .filter(serverResponse => serverResponse.success);
 
 const deleteCustomer$ = deleteData$
+  .filter(event => {
+    const $tabel = $(event.target).parent().parent().parent().parent();
+    return $tabel.attr('id') === 'tabel-customer';
+  })
   .flatMap(event => {
     const $row = $(event.target).parent().parent();
     const id = parseInt($row.attr('id'));
